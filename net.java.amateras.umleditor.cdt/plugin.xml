@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="%plugin.category"
+            id="net.java.amateras.umleditor.category">
+      </category>
+      <view
+            name="%plugin.sample.view"
+            icon="icons/sample.gif"
+            category="net.java.amateras.umleditor.category"
+            class="net.java.amateras.uml.cdt.views.SampleView"
+            id="net.java.amateras.uml.cdt.views.SampleView">
+      </view>
+   </extension>
+   <extension
+         point="net.java.amateras.umleditor.dnd">
+      <listenerFactory
+            class="net.java.amateras.uml.dnd.cdt.ClassDiagramDropTargetListenerFactory">
+      </listenerFactory>
+      <listenerFactory
+            class="net.java.amateras.uml.dnd.cdt.SequenceDiagramDropTargetListenerFactory">
+      </listenerFactory>
+   </extension>
+
+</plugin>
